@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
@@ -18,6 +17,10 @@ const route: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+  },
+  {
+    path: 'posts',
+    loadChildren: './pages/posts/posts.module#PostsModule'
   },
   {
     path: '**',
